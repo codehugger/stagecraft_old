@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329140827) do
+ActiveRecord::Schema.define(version: 20140329142107) do
 
   create_table "actions", force: true do |t|
     t.text     "value"
@@ -53,7 +53,8 @@ ActiveRecord::Schema.define(version: 20140329140827) do
   end
 
   create_table "gateways", force: true do |t|
-    t.integer  "scene_id"
+    t.integer  "destination_scene_id"
+    t.integer  "source_scene_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,6 +81,16 @@ ActiveRecord::Schema.define(version: 20140329140827) do
     t.datetime "updated_at"
   end
 
+  create_table "ownerships", force: true do |t|
+    t.integer  "player_id"
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ownerships", ["game_id"], name: "index_ownerships_on_game_id"
+  add_index "ownerships", ["player_id"], name: "index_ownerships_on_player_id"
+
   create_table "players", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -105,7 +116,7 @@ ActiveRecord::Schema.define(version: 20140329140827) do
 
   create_table "scenes", force: true do |t|
     t.string   "name"
-    t.integer  "game_id"
+    t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
