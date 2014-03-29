@@ -1,9 +1,9 @@
 class CreateDialogues < ActiveRecord::Migration
   def change
     create_table :dialogues do |t|
-      t.text :question
-      t.text :answer
-      t.references :appearance
+      t.text :question, :null => false
+      t.text :answer, :null => false
+      t.references :appearance, :null => false
 
       t.timestamps
     end

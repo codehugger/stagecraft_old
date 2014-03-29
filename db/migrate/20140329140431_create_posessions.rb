@@ -1,8 +1,8 @@
 class CreatePosessions < ActiveRecord::Migration
   def change
     create_table :posessions do |t|
-      t.references :item
-      t.references :instance
+      t.references :item, :null => false
+      t.references :instance, :null => false
 
       t.timestamps
     end

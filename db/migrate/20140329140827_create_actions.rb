@@ -1,7 +1,7 @@
 class CreateActions < ActiveRecord::Migration
   def change
     create_table :actions do |t|
-      t.text :value
+      t.text :value, :null => false
       t.references :variable
       t.references :item
       t.references :gateway
