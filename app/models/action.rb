@@ -1,4 +1,6 @@
 class Action < ActiveRecord::Base
+  include Tokenable
+
   belongs_to :variable
   belongs_to :item
   belongs_to :gateway

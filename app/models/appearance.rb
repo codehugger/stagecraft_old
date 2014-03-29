@@ -1,4 +1,6 @@
 class Appearance < ActiveRecord::Base
+  include Tokenable
+
   belongs_to :character
   belongs_to :scene
   has_many :dialogues

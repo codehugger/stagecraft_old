@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329142107) do
+ActiveRecord::Schema.define(version: 20140329162408) do
 
   create_table "actions", force: true do |t|
-    t.text     "value"
+    t.text     "value",         null: false
     t.integer  "variable_id"
     t.integer  "item_id"
     t.integer  "gateway_id"
@@ -22,70 +22,80 @@ ActiveRecord::Schema.define(version: 20140329142107) do
     t.integer  "dialogue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "appearances", force: true do |t|
-    t.integer  "character_id"
-    t.integer  "scene_id"
+    t.integer  "character_id", null: false
+    t.integer  "scene_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "characters", force: true do |t|
-    t.string   "name"
-    t.integer  "game_id"
+    t.string   "name",       null: false
+    t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "dialogues", force: true do |t|
-    t.text     "question"
-    t.text     "answer"
-    t.integer  "appearance_id"
+    t.text     "question",      null: false
+    t.text     "answer",        null: false
+    t.integer  "appearance_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "games", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "gateways", force: true do |t|
-    t.integer  "destination_scene_id"
-    t.integer  "source_scene_id"
+    t.integer  "destination_scene_id", null: false
+    t.integer  "source_scene_id",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "instance_variables", force: true do |t|
-    t.integer  "variable_id"
-    t.integer  "instance_id"
-    t.text     "value"
+    t.integer  "variable_id", null: false
+    t.integer  "instance_id", null: false
+    t.text     "value",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "instances", force: true do |t|
-    t.integer  "player_id"
-    t.integer  "game_id"
+    t.integer  "player_id",  null: false
+    t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "items", force: true do |t|
-    t.string   "name"
-    t.integer  "scene_id"
+    t.string   "name",       null: false
+    t.integer  "scene_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "ownerships", force: true do |t|
-    t.integer  "player_id"
-    t.integer  "game_id"
+    t.integer  "player_id",  null: false
+    t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   add_index "ownerships", ["game_id"], name: "index_ownerships_on_game_id"
@@ -94,17 +104,19 @@ ActiveRecord::Schema.define(version: 20140329142107) do
   create_table "players", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "posessions", force: true do |t|
-    t.integer  "item_id"
-    t.integer  "instance_id"
+    t.integer  "item_id",     null: false
+    t.integer  "instance_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "rules", force: true do |t|
-    t.text     "value"
+    t.text     "value",         null: false
     t.integer  "variable_id"
     t.integer  "item_id"
     t.integer  "gateway_id"
@@ -112,20 +124,23 @@ ActiveRecord::Schema.define(version: 20140329142107) do
     t.integer  "dialogue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "scenes", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "variables", force: true do |t|
-    t.string   "name"
-    t.integer  "game_id"
+    t.string   "name",       null: false
+    t.integer  "game_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   add_index "variables", ["game_id"], name: "index_variables_on_game_id"

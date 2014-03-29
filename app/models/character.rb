@@ -1,4 +1,6 @@
 class Character < ActiveRecord::Base
+  include Tokenable
+
   belongs_to :game
   has_many :appearances
   has_many :scenes, :through => :appearances

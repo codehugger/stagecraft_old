@@ -1,4 +1,6 @@
 class Rule < ActiveRecord::Base
+  include Tokenable
+
   belongs_to :varialbe
   belongs_to :item
   belongs_to :gateway
