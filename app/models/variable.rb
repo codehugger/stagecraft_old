@@ -4,4 +4,8 @@ class Variable < ActiveRecord::Base
   belongs_to :game
   has_many :rules
   has_many :events
+
+  def to_s
+    "#{name}"
+  end
 end

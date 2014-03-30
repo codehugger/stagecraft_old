@@ -18,7 +18,8 @@ class InstancesController < ApplicationController
 
   def interact
     item = @instance.current_scene.items.find(params[:item_id])
-    item.run_actions
+    item.run_events(@instance)
+    redirect_to instance_path(@instance)
   end
 
   private

@@ -3,4 +3,8 @@ class InstanceVariable < ActiveRecord::Base
 
   belongs_to :instance
   belongs_to :variable
+
+  def to_s
+    "#{variable}: #{value}"
+  end
 end
