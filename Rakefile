@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Corridor::Application.load_tasks
+Stagecraft::Application.load_tasks
