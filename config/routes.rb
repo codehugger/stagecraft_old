@@ -3,7 +3,11 @@ Stagecraft::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :instances
+  resources :instances do
+    member do
+      get 'inventory'
+    end
+  end
 
   root 'welcome#index'
 

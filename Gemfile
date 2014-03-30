@@ -37,7 +37,7 @@ gem 'rails-assets-ember'
 gem 'rails-assets-ember-data'
 
 # Twitter bootstrap
-gem 'rails-assets-bootstrap'
+gem 'rails-assets-bootstrap-sass'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,4 +1,4 @@
-class Action < ActiveRecord::Base
+class Event < ActiveRecord::Base
   include Tokenable
 
   belongs_to :variable

@@ -1,6 +1,6 @@
-class CreateActions < ActiveRecord::Migration
+class CreateEvents < ActiveRecord::Migration
   def change
-    create_table :actions do |t|
+    create_table :events do |t|
       t.text :value, :null => false
       t.references :variable
       t.references :item

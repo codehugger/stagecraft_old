@@ -13,18 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140330132340) do
 
-  create_table "actions", force: true do |t|
-    t.text     "value",         null: false
-    t.integer  "variable_id"
-    t.integer  "item_id"
-    t.integer  "gateway_id"
-    t.integer  "appearance_id"
-    t.integer  "dialogue_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "token"
-  end
-
   create_table "appearances", force: true do |t|
     t.integer  "character_id", null: false
     t.integer  "scene_id",     null: false
@@ -45,6 +33,18 @@ ActiveRecord::Schema.define(version: 20140330132340) do
     t.text     "question",      null: false
     t.text     "answer",        null: false
     t.integer  "appearance_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "token"
+  end
+
+  create_table "events", force: true do |t|
+    t.text     "value",         null: false
+    t.integer  "variable_id"
+    t.integer  "item_id"
+    t.integer  "gateway_id"
+    t.integer  "appearance_id"
+    t.integer  "dialogue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"
@@ -103,14 +103,6 @@ ActiveRecord::Schema.define(version: 20140330132340) do
   add_index "ownerships", ["player_id"], name: "index_ownerships_on_player_id"
 
   create_table "players", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "token"
-  end
-
-  create_table "posessions", force: true do |t|
-    t.integer  "item_id",     null: false
-    t.integer  "instance_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"
