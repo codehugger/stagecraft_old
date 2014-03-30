@@ -5,5 +5,5 @@ class Appearance < ActiveRecord::Base
   belongs_to :scene
   has_many :dialogues
   has_many :rules
-  has_many :actions
+  has_many :events
 end

@@ -3,5 +3,5 @@ class Variable < ActiveRecord::Base
 
   belongs_to :game
   has_many :rules
-  has_many :actions
+  has_many :events
 end

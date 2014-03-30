@@ -1,38 +1,70 @@
-<div id="theater"></div>
+<h1 class="page-header"><%= @instance.game.name %></h1>
 
-<script type="text/x-handlebars" id="components/scene-description">
-	<div>{{description}}</div>
-</script>
-
-<script type="text/x-handlebars">
-	<h1 class="page-header">Theater - <%= @instance.game.name %></h1>
-	<div class="row">
-		<div class="col-md-9">
-			<div class="row">
-				<div class="col-md-12 well">
-					{{scene-description}}
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					{{player_actions}}
-				</div>
-				<div class="col-md-8">
-					{{logs}}
+<div class="row">
+	<div class="col-md-9">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading"><h3 class="panel-title"><%= @instance.current_scene %></h3></div>
+					<div class="panel-body">
+						<%= @instance.current_scene.description %>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
-			<div class="row">
-				<div class="col-md-12">
-					{{inventory}}
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Items</div>
+					<% if !@instance.current_scene.items.blank? %>
+					<ul class="list-group">
+						<% for item in @instance.current_scene.items %>
+						<li class="list-group-item"><%= link_to item, interact_instance_path(:item_id => item.id) %></li>
+						<% end %>
+					</ul>
+					<% else %>
+					<div class="panel-body">
+						The scene contains no items ... or does it?
+					</div>
+					<% end %>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					{{variables}}
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Exits</div>
+					<% if !@instance.current_scene.exits.blank? %>
+					<ul class="list-group">
+						<% for exit in @instance.current_scene.exits %>
+						<% if exit.available?(@instance) %>
+						<li class="list-group-item"><%= link_to exit, travel_instance_path(:gateway_id => exit.id) %></li>
+						<% else %>
+						<li class="list-group-item"><i class="glyphicon glyphicon-lock"></i> <%= exit %></li>
+						<% end %>
+						<% end %>
+					</ul>
+					<% else %>
+					<div class="panel-body">
+						The scene contains no exits ... is it foamy?
+					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
 	</div>
-</script>
+	<div class="col-md-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">Environment</div>
+			<% if !@instance.instance_variables.blank? %>
+			<ul class="list-group">
+				<% for variable in @instance.instance_variables %>
+				<li class="list-group-item"><%= variable %></li>
+				<% end %>
+			</ul>
+			<% else %>
+			<div class="panel-body">
+				It smells a bit funny ... that's it ... I swear!
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

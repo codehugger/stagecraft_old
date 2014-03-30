@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140330132340) do
+ActiveRecord::Schema.define(version: 20140330172847) do
 
   create_table "appearances", force: true do |t|
     t.integer  "character_id", null: false
@@ -76,11 +76,12 @@ ActiveRecord::Schema.define(version: 20140330132340) do
   end
 
   create_table "instances", force: true do |t|
-    t.integer  "player_id",  null: false
-    t.integer  "game_id",    null: false
+    t.integer  "player_id",        null: false
+    t.integer  "game_id",          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"
+    t.integer  "current_scene_id"
   end
 
   create_table "items", force: true do |t|
@@ -121,11 +122,13 @@ ActiveRecord::Schema.define(version: 20140330132340) do
   end
 
   create_table "scenes", force: true do |t|
-    t.string   "name",       null: false
-    t.integer  "game_id",    null: false
+    t.string   "name",                         null: false
+    t.integer  "game_id",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"
+    t.boolean  "is_end_scene", default: false
+    t.text     "description"
   end
 
   create_table "variables", force: true do |t|

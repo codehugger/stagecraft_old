@@ -6,5 +6,5 @@ class Character < ActiveRecord::Base
   has_many :scenes, :through => :appearances
   has_many :dialogues, :through => :appearances
   has_many :rules, :through => :appearances
-  has_many :actions, :through => :appearances
+  has_many :events, :through => :appearances
 end

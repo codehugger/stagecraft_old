@@ -3,5 +3,9 @@ class Item < ActiveRecord::Base
 
   belongs_to :scene
   has_many :rules
-  has_many :actions
+  has_many :events
+
+  def to_s
+    "#{name}"
+  end
 end

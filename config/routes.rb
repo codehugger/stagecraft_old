@@ -5,7 +5,9 @@ Stagecraft::Application.routes.draw do
 
   resources :instances do
     member do
-      get 'inventory'
+      get 'travel/:gateway_id' => 'instances#travel', as: :travel
+      get 'converse/:appearance_id' => 'instances#converse', as: :converse
+      get 'interact/:item_id' => 'instances#interact', as: :interact
     end
   end
 
