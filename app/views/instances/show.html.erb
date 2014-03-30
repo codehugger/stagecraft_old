@@ -1,0 +1,38 @@
+<div id="theater"></div>
+
+<script type="text/x-handlebars" id="components/scene-description">
+	<div>{{description}}</div>
+</script>
+
+<script type="text/x-handlebars">
+	<h1 class="page-header">Theater - <%= @instance.game.name %></h1>
+	<div class="row">
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+					{{scene-description}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					{{player_actions}}
+				</div>
+				<div class="col-md-8">
+					{{logs}}
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row">
+				<div class="col-md-12">
+					{{inventory}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					{{variables}}
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
