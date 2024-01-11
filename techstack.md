@@ -36,7 +36,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [codehugger/stagecraft_old](https://github.com/codehugger/stagecraft_old)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|20<br/>Tools used|01/05/24 <br/>Report generated|
+|22<br/>Tools used|01/11/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -151,16 +151,18 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (10)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (12)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg'/> RubyGems (10)
+## <img width='24' height='24' src='https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg'/> RubyGems (12)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[better_errors](https://rubygems.org/better_errors)|v1.1.0|03/30/14|Bjarki Gudlaugsson |MIT|[CVE-2021-39197](https://github.com/advisories/GHSA-w3j4-76qw-wwjm) (Moderate)|
 |[binding_of_caller](https://rubygems.org/binding_of_caller)|v0.7.2|03/29/14|Bjarki Gudlaugsson |MIT|N/A|
+|[bullet](https://rubygems.org/bullet)|v4.8.0|03/29/14|Bjarki Gudlaugsson |MIT|N/A|
 |[cucumber-rails](https://rubygems.org/cucumber-rails)|v1.4.0|03/30/14|Bjarki Gudlaugsson |MIT|N/A|
 |[jbuilder](https://rubygems.org/jbuilder)|v1.5.3|03/29/14|Bjarki Gudlaugsson |MIT|N/A|
+|[rails-erd](https://rubygems.org/rails-erd)|v1.1.0|03/30/14|Bjarki Gudlaugsson |MIT|N/A|
 |[rails_admin](https://rubygems.org/rails_admin)|v0.6.1|03/30/14|Bjarki Gudlaugsson |MIT|[CVE-2020-36190](https://github.com/advisories/GHSA-wjx2-7hqq-8h7m) (Moderate)<br/>[CVE-2017-12098](https://github.com/advisories/GHSA-pxr8-w3jq-rcwj) (Moderate)|
 |[sass-rails](https://rubygems.org/sass-rails)|v4.0.2|03/30/14|Bjarki Gudlaugsson |MIT|N/A|
 |[sdoc](https://rubygems.org/sdoc)|v0.4.0|03/29/14|Bjarki Gudlaugsson |MIT|N/A|
