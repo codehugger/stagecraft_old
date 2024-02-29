@@ -3,12 +3,12 @@
 ## Tech Stack
 codehugger/stagecraft_old is built on the following main stack:
 
-- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [Ruby](https://www.ruby-lang.org) – Languages
 - [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
-- [SQLite](http://www.sqlite.org/) – Databases
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [RailsAdmin](https://github.com/sferik/rails_admin) – Database Tools
+- [SQLite](http://www.sqlite.org/) – Databases
+- [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - [UglifyJS](http://lisperator.net/uglifyjs/) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
@@ -19,12 +19,12 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 codehugger/stagecraft_old is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/990/x57_Lorv.png' alt='Rails'/> [Rails](http://rubyonrails.org/) – Frameworks (Full Stack)
-- <img width='25' height='25' src='https://img.stackshare.io/service/1071/sqlite.jpg' alt='SQLite'/> [SQLite](http://www.sqlite.org/) – Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='RailsAdmin'/> [RailsAdmin](https://github.com/sferik/rails_admin) – Database Tools
+- <img width='25' height='25' src='https://img.stackshare.io/service/1071/sqlite.jpg' alt='SQLite'/> [SQLite](http://www.sqlite.org/) – Databases
+- <img width='25' height='25' src='https://img.stackshare.io/service/43/kQ_6nwmP.jpg' alt='Twilio SendGrid'/> [Twilio SendGrid](http://sendgrid.com) – Transactional Email
 - <img width='25' height='25' src='https://img.stackshare.io/service/2203/default_9058af6f02375a99f634f537d727e32df92ac262.png' alt='UglifyJS'/> [UglifyJS](http://lisperator.net/uglifyjs/) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
@@ -36,7 +36,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [codehugger/stagecraft_old](https://github.com/codehugger/stagecraft_old)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|22<br/>Tools used|01/11/24 <br/>Report generated|
+|22<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
